@@ -2,6 +2,16 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
+// 引入mui组件
+import MintUI from 'mint-ui'
+import 'mint-ui/lib/style.css'
+
+// 引入mui樣式
+import "./assets/mui/css/mui.css"
+import "./assets/mui/css/icons-extra.css"
+
+Vue.use(MintUI)
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
