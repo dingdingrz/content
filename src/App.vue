@@ -1,7 +1,10 @@
 <template>
   <div id="app">
     <div class="header">
-      <mt-header fixed title="MY-PROJECT"></mt-header>
+			
+      <mt-header fixed title="MY-PROJECT">
+				<mt-button  type="danger" icon="back" slot="left" v-if="$route.path !='home'" @click = '$router.go(-1)' >返回</mt-button>
+			</mt-header>
     </div>
     <router-view/>
       <nav class="mui-bar mui-bar-tab">
@@ -39,5 +42,8 @@ export default {
 }
 .header {
   height: 40px;
+}
+.pages{
+	padding: 8px 0 50px 0
 }
 </style>
