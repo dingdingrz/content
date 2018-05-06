@@ -5,12 +5,13 @@ import Home from '../components/tabbar/home.vue';
 import Cart from '../components/tabbar/cart.vue';
 import Member from '../components/tabbar/member.vue';
 import Search from '../components/tabbar/search.vue';
-import DetailList from '../components/detail/detailList.vue';
-import Details from '../components/detail/details.vue';
+import Goodslist from '../components/detail/goodslist.vue';
+import GoodsDetail from '../components/detail/goodsdetail.vue';
 import NewsList from '../components/news/newslist.vue';
 import NewsListDetail from '../components/news/newslistDetail.vue';
 import PictureDetail from '../components/pic/pictureDetail.vue';
 import PictureList from '../components/pic/pictureList.vue';
+import Comments from '../components/detail/comment.vue'
 
 Vue.use(Router)
 
@@ -35,12 +36,12 @@ export default new Router({
       component:Search,
     },
     {
-      path :'/detaillist',
-      component:DetailList,
+      path :'/goodslist',
+      component:Goodslist,
     },
     {
-      path :'/details',
-      component:Details,
+      path :'/goodsdetail/:id',
+      component:GoodsDetail,
     },
     {
       path :'/newslist',
@@ -49,6 +50,17 @@ export default new Router({
     {
       path :'/newslistdetail/:id',
       component:NewsListDetail,
+    },
+    {
+      path:'/picturelist/:id',
+      component : PictureList
+    },
+    {
+      path:'/picturedetail/:id',
+      component:PictureDetail
+    },{
+      path:'/detail/comment/:id',
+      component:Comments
     }
   ]
 })
